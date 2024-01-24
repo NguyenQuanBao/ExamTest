@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete</title>
+</head>
+<body>
+<h1>Thành phố <span th:text="${productDelete.getName()}"></span></h1>
+<p>
+    <a th:href="@{/product}">
+        Back to list city
+    </a>
+</p>
+<div id="form">
+    <form th:action="@{/product/remove}" method="post" novalidate="novalidate" th:object="${productDelete}">
+        <input type="hidden" th:field="*{id}">
+        <div>
+            <p>Bạn có chắc là muốn xóa sản phẩm này không</p>
+        </div>
+        <input type="submit" value="delete">
+    </form>
+</div>
+</body>
+</html>

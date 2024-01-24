@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</div>
+<p>
+    <a th:href="@{/product}">
+        Back to list city
+    </a>
+</p>
+<div id="form">
+    <form th:action="@{/product/save}" method="post" novalidate="novalidate" th:object="${product}">
+        <input type="hidden" th:field="*{id}">
+        <label>Tên: </label>
+        <input type="text" th:field="*{name}">
+        <div>
+            <label>Giá:</label>
+            <input type="number" th:field="*{price}">
+        </div>
+        <div>
+            <label>Ngày sản xuất</label>
+            <input type="date" th:field="*{date}">
+        </div>
+        <div>
+            <label>Giới thiệu: </label>
+            <input type="text" th:field="*{info}">
+        </div>
+        <input type="submit" value="edit">
+    </form>
+</div>
+</body>
+</html>

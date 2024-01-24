@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>product<span th:text="${info.get().getName()}"></span></h1>
+<p>
+    <a th:href="@{/product}">
+        Back to list city
+    </a>
+</p>
+<p>Tên: <span th:text="${info.get().getName()}"></span></p>
+<p>Date: <span th:text="${info.get().getDate()}"></span></p>
+<p>price: <span th:text="${info.get().getPrice()}"></span></p>
+<p>Detail: </p>
+<p th:text="${info.get().getInfo()}"></p>
+</body>
+</html>
